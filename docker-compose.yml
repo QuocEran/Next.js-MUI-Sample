@@ -1,0 +1,14 @@
+version: "3.9" #This denotes that we are using version 3 of Docker Compose
+services: #This section defines all the different containers we will create.
+  next-mui: #This is the name of our Nextjs application.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: next-mui
+    image: next-mui
+    ports:
+      - "4001:3000"
+
+    env_file:
+      - .env
+    restart: unless-stopped
