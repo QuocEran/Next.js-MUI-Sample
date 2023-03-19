@@ -11,7 +11,7 @@
     "check-format": "prettier --check .",
     "format": "prettier --write .",
     "test-all": "yarn run check-format && yarn run lint && yarn run check-types && yarn run build",
-    "prepare": "husky install"
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
